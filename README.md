@@ -8,12 +8,14 @@ The SQL Employee Tracker is a command-line application that allows users to mana
 - [Usage](#usage)
 - [Functionality](#functionality)
 - [Database Schema](#database-schema)
+- [Walk Through Video](#walk-through-video)
+- [Screen Shots](#screen-shots)
 - [Example Data](#example-data)
 - [Credits](#credits)
 - [License](#license)
 
 ## Installation
-1. Clone the repository: `git clone https://github.com/jellobear27/sql-employee-tracker.git`
+1. Clone the repository: `git clone https://github.com/jellobear27/sql-employee-tracker`
 2. Install dependencies: `npm install`
 3. Set up a MySQL database and configure the connection parameters in `server.js`
 4. Run the application: `npm start`
@@ -37,11 +39,20 @@ The application uses a MySQL database with the following tables:
 - `roles`: Stores role details linked to specific departments.
 - `employee`: Holds employee data with references to roles and managers.
 
+## Walk Through Video
+[![Watch the video]](https://drive.google.com/file/d/1yPh4DMjG_D_D0go80QPLZrt5s6e8k19F/view?usp=drive_link)
+
+## Screen Shots
+![Screenshot](assets/Screenshot%202023-12-08%20at%209.38.01%20PM.png)
+![Screenshot](assets/Screenshot%202023-12-08%20at%209.38.24%20PM.png)
+
+
 ## Example Data
 Sample data has been provided in the application's SQL file, including departments, roles, and employees. The data can be viewed within the SQL file for reference.
 
 ## Credits
-- **Author:** janell
+- Tutor assistance: Bobby Tarkany
+- Github reference: https://github.com/ThomasCalle/Thomas-SQL-Employee-Tracker
 
 ## License
 This project is licensed under the [MIT License](LICENSE).

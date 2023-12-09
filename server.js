@@ -653,12 +653,17 @@ function viewTotalUtilizedBudgetOfDepartment() {
                     departments.id = ?
                   GROUP BY 
                     departments.id;`;
-                connection.query(query, [answer.departmentId], (err, res) => {
-                    if (err) throw err;
-                    const totalSalary = res[0].total_salary;
-                    console.log(
-                        `The total salary for employees in this department is $${totalSalary}`
-                    );
+                    connection.query(query, [answer.departmentId], (err, res) => {
+                        if (err) throw err;
+                    
+                        if (res.length > 0 && res[0].total_salary !== null) {
+                            const totalSalary = res[0].total_salary;
+                            console.log(
+                                `The total salary for employees in this department is $${totalSalary}`
+                            );
+                        } else {
+                            console.log('No salary information available for this department.');
+                        }
                     // restart the application
                     start();
                 });
